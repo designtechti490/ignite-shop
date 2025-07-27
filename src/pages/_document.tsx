@@ -1,10 +1,11 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import {getCssText} from '../styles'
+import { getCssText } from "../styles";
 
 export default function Document() {
   return (
     <Html>
       <Head>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -15,7 +16,10 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
         />
-        <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
+        <style
+          id="stitches"
+          dangerouslySetInnerHTML={{ __html: getCssText() }}
+        />
       </Head>
       <body>
         <Main />
