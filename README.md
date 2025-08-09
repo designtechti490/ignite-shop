@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⏳Ignite Shop - E-commerce 🍅
 
-## Getting Started
+![preview](github/preview.png)
 
-First, run the development server:
+## 🚀 About this Project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A mini e-commerce to sell custom Rocketseat t-shirts developed during the React.js track classes at the Ignite bootcamp using Next.js + Stripe
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📱 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🛒 Product Catalog and Dynamic Pages
+- 🧭 Optimized Browsing Navigation
+- 🛡️ Safe Checkout with Redirection
+- ✅ Post-Purchase Visual Feedback
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Figma Layout
 
-## Learn More
+You can view its layout throughth [this link](https://www.figma.com/file/OIJJEW24DFiJO6XLqHw2DM/Ignite-Shop/).
 
-To learn more about Next.js, take a look at the following resources:
+## ⚡ Technologies Envolved
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![ReactJS](https://img.shields.io/badge/ReactJS-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)<br>
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)<br>
+![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)<br>
+![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)<br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Setup
 
-## Deploy on Vercel
+![how to setup](./github/setup.png)
+![how to setup](./github/environment-variables.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are always welcome! Here's how you can contribute:
+
+1. Fork the project
+2. Create a Branch for your Feature (`git checkout -b feature/AmazingFeature`)
+3. Add your changes (`git add .`)
+4. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+5. Push to the Branch (`git push origin feature/AmazingFeature`)
+6. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE). See the LICENSE file for more details.
+
+## 👨‍💻 Author
+
+<table width="100%">
+
+<tr>
+
+<td align="center">
+
+<a href="https://github.com/designtechti490">
+
+<img src="https://github.com/designtechti490.png" width="100px;" alt=""/>
+
+<br />
+
+<sub>
+
+<b>Marcelo Junior</b>
+          <i>Front End Developer</i>
+
+</sub>
+
+</a>
+
+</td>
+
+</tr>
+
+</table>
+
+---
+
+<p align="center"> Developed with 💜 during Rocketseat's Ignite bootcamp </p>
