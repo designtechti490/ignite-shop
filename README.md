@@ -1,4 +1,4 @@
-# ⏳Ignite Shop - E-commerce 🍅
+# 👕Ignite Shop - E-commerce 🛒
 
 ![preview](github/preview.png)
 
