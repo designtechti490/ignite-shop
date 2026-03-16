@@ -103,26 +103,40 @@ export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
 }) => {
   const productId = params.id;
 
-  const product = await stripe.products.retrieve(productId, {
-    expand: ["default_price"],
-  });
+  if (!productId) {
+    return {
+      notFound: true,
+    };
+  }
 
-  const price = product.default_price as Stripe.Price;
+  try {
+    const product = await stripe.products.retrieve(productId, {
+      expand: ["default_price"],
+    });
 
-  return {
-    props: {
-      product: {
-        id: product.id,
-        name: product.name,
-        imageUrl: product.images[0],
-        price: new Intl.NumberFormat("pt-BR", {
-          style: "currency",
-          currency: "BRL",
-        }).format(price.unit_amount / 100),
-        description: product.description,
-        defaultPriceId: price.id,
+    const price = product.default_price as Stripe.Price;
+
+    return {
+      props: {
+        product: {
+          id: product.id,
+          name: product.name,
+          imageUrl: product.images[0],
+          price: new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          }).format(price.unit_amount / 100),
+          description: product.description,
+          defaultPriceId: price.id,
+        },
       },
-    },
-    revalidate: 60 * 60 * 1, // 1 hours
-  };
+      revalidate: 60 * 60 * 1, // 1 hours
+    };
+  } catch (err) {
+    console.error("[getStaticProps] failed to fetch product", err);
+
+    return {
+      notFound: true,
+    };
+  }
 };
