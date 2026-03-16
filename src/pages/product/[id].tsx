@@ -36,11 +36,26 @@ export default function Product({ product }: ProductProps) {
 
       const { checkoutUrl } = response.data;
 
+      if (!checkoutUrl) {
+        throw new Error("URL de checkout não retornada.");
+      }
+
       window.location.href = checkoutUrl;
     } catch (err) {
       setIsCreatingCheckoutSession(false);
 
-      alert("Falha ao redirecionar ao checkout!");
+      const message =
+        axios.isAxiosError(err) && err.response?.data?.error
+          ? err.response.data.error
+          : axios.isAxiosError(err) && err.response?.data?.details
+            ? `${err.response.data.error}: ${err.response.data.details}`
+            : axios.isAxiosError(err)
+              ? err.message || "Falha ao redirecionar ao checkout!"
+              : err instanceof Error
+                ? err.message
+                : "Falha ao redirecionar ao checkout!";
+
+      alert(message);
     }
   }
 

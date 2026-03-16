@@ -1,17 +1,16 @@
-// import type { NextConfig } from "next";
+import type { NextConfig } from "next";
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   // swcMinify: true,
 
   images: {
-    domains: ["files.stripe.com"],
-  },
-
-  experimental: {
-    images: {
-      allowFutureImage: true,
-    },
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "files.stripe.com",
+      },
+    ],
   },
 };
 
