@@ -4,8 +4,9 @@ export const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
-  justifyContent: "center",
+  justifyContent: "flex-start",
   minHeight: "100vh",
+  paddingBottom: "2rem",
 });
 
 export const Header = styled("header", {
